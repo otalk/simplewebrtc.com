@@ -1,0 +1,21 @@
+block vars
+  - var pageTitle = "Learn"
+  - var description = "Get started with Ampersand.js"
+  - var bodyClass = "learn-index"
+  - var indexActive = true
+  - var pageState = "learn"
+
+extends /templates/layout
+
+block content
+
+  .docs.cf
+    include /templates/learn-menu
+
+    .docs-content
+      section
+        h1 Learn how to use SimpleWebRTC
+
+        p This is the default content for this 'Learn' section
+
+        p Put some helpful information about here

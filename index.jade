@@ -1,0 +1,86 @@
+block vars
+  - var pageTitle = "Home"
+  - var description = "Ampersand.js, Javascript, ampersand, Node.js, Apps, HTML5"
+
+extends templates/layout
+
+block content
+
+  header.hero
+    .illustration.temp
+      p illustration goes here?
+    h1 A headline about SimpleWebRTC
+
+  hr
+
+  section.splash
+
+    .container.cf
+      .splash-intro
+        h2 SimpleWebRTC
+        p Some paragraphs and stuff
+        a.button.button-primary(href="/learn") Discover SimpleWebRTC
+
+      .releases-list
+        h3 Recent releases
+        for module in globals.recent
+          - var split = new Date(module.time[module['dist-tags'].latest]).toDateString().split(' ');
+          - var dateString = split.slice(1, 3).join(' ') + ', ' + split[3];
+          .module-card
+            h4.module-name= module.name
+            p.module-version= 'v' + module['dist-tags'].latest + ' – ' + dateString
+            p.module-links
+              a(href= module.homepage) github
+              a(href= module.npmlink) npm
+        
+        a.button.button-primary(href="/contribute") How to contribute
+
+    hr
+
+    .callout.human-javascript
+      h2 A foundation for building simple but powerful client-side apps
+      img.humanjs-ipad(src="/public/images/human-javascript.png")
+      //- Needs svg and png fallback
+      a.logo.logo-humanjs(href="http://humanjavascript.com/") Human JavaScript
+      p Henrik Joreteg introduces practical patterns for powerfully simple application development. 
+        a(href="http://humanjavascript.com/")
+          em Human Javascript 
+        | is a saner way to write JS.
+      a.button.button-secondary(href="https://gumroad.com/l/humanjs") Buy the book for $39
+      a.button.button-secondary(href="http://read.humanjavascript.com/") Read it free online
+
+    hr
+
+    .callout.modules-list
+      h2 Useful modules
+      .cf
+        for module in globals.featured
+          .module-card
+            h4.module-name= module.name
+            p.module-author by #{module.author.name}
+            p.module-description= module.description
+            p.module-links
+              if module.homepage
+                a(href= module.homepage) github
+              a(href= module.npmlink) npm
+
+    hr
+
+    .callout.community
+      h2 See SimpleWebRTC in Action
+      .projects-list.cf
+        .project
+          a.logo.logo-andbang(href="https://andbang.com/") And Bang
+          p
+            a(href="https://andbang.com/") And Bang 
+            | helps same-page-ify your team with shared tasks and chat.
+        .project
+          a.logo.logo-talky(href="https://talky.io/") Talky
+          p
+            a(href="https://talky.io/") Talky 
+            | is truly simple video chat and screen sharing, powered by WebRTC.
+        .project
+          a.logo.logo-otalk(href="https://otalk.im/login") Otalk
+          p
+            a(href="https://otalk.im/login") Otalk 
+            | is an open source chat client powered by XMPP, stanza.io, and WebRTC.

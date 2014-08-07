@@ -1,0 +1,49 @@
+doctype
+html(lang="en")
+
+  //- Variable block for page-specific info
+  block vars
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    meta(name="description", content="WebRTC, SimpleWebRTC, Talky, Talky.io, library, JavaScript, Node.js")
+    meta(name="author", content="#{description}")
+
+    title SimpleWebRTC.js - #{pageTitle || globals.pageTitle}
+
+    link(rel="stylesheet", href="//cloud.typography.com/7773252/613684/css/fonts.css")
+    link(rel="stylesheet", href="/public/css/normalize.min.css")
+    link(rel="stylesheet", href="/public/css/main.css")
+  body(class="#{bodyClass}")
+
+    nav.nav-main.cf
+      a.logo(href="/") SimpleWebRTC
+      a.nav-item(class= pageState === 'learn' ? 'active' : '', href="/learn") Learn
+      a.nav-item(class= pageState === 'docs' ? 'active' : '', href="/docs") Docs
+      a.nav-item(class= pageState === 'contribute' ? 'active' : '', href="/contribute") Contribute
+      a.button.button-primary(href="/learn/quick-start-guide/") Get Started
+
+    block content
+
+    footer.footer-main
+      nav.nav-footer
+        a.nav-item(href="/learn") Learn
+        a.nav-item(href="/docs") Docs
+        a.nav-item(href="/contribute") Contribute
+        a.nav-item(href="#") Github
+      p Sponsored by 
+        a(href="https://andyet.com") &amp;yet 
+        br
+        | with the help of our 
+        a(href="/contribute") contributors
+      a.logo.logo-ampersand-gray(href="/") &amp;
+
+    //- Add Google Analytics for this site
+
+    script(src='/public/js/highlight.pack.js')
+
+    script.
+      hljs.configure({classPrefix: ''});
+      hljs.initHighlightingOnLoad();
+

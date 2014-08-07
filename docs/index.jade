@@ -1,0 +1,51 @@
+block vars
+  - var pageTitle = "Documentation"
+  - var description = "Get started with Ampersand.js"
+  - var bodyClass = "docs-page"
+  - var pageState = "docs"
+
+extends ../templates/layout
+
+block content
+
+  .docs.cf
+    nav.nav-docs
+      a.logo.logo-ampersand(href="/")
+      a.section-top(href= '#intro') Introduction
+      for module, key in globals.modules
+        for item in module.toc
+          if item.depth === 1
+            a.section-top(href= '#' + item.linkText)!= item.text
+          if item.depth === 2
+            a.section-sub(href= '#' + item.linkText)!= item.text
+          if item.depth === 3
+            a.section-sub-sub(href= '#' + item.linkText)!= item.text
+
+    .docs-content
+      section
+        a.anchor(name= "intro", href= '#intro')
+          h1
+            span.header-link
+            | API Documentation
+        
+        p This page has consolidated API reference documentation for the core modules in a single page for the sake of being 'cmd+f' friendly.
+
+        p For more in-depth guides, conventions, best practices, and how to use these tools together please see <a href="/learn">guides</a>.
+
+      for module, key in globals.modules
+        section.module
+          a.anchor(name= module.name, href= '#' + module.name)
+            h1
+              span.header-link
+              | #{module.title}
+          .module-card
+            h4.module-name= module.name
+            p.module-version= 'latest v' + module['dist-tags'].latest
+            p.module-description= module.description
+            p.module-links
+              a(href= module.homepage) github
+              a(href='https://www.npmjs.org/package/#{module.name}') npm
+
+          div!= module.html
+
+  script(src="/public/js/setup.js")

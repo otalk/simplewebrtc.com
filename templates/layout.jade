@@ -12,13 +12,15 @@ html(lang="en")
 
     title SimpleWebRTC.js - #{pageTitle || globals.pageTitle}
 
-    link(rel="stylesheet", href="//cloud.typography.com/7773252/613684/css/fonts.css")
+    link(rel="stylesheet", href="//cloud.typography.com/7773252/632524/css/fonts.css")
     link(rel="stylesheet", href="/public/css/normalize.min.css")
     link(rel="stylesheet", href="/public/css/main.css")
   body(class="#{bodyClass}")
 
     nav.nav-main.cf
-      a.logo(href="/") SimpleWebRTC
+      a.logo.logo-simplewebrtc(href="/")
+        span simple
+        | WebRTC
       a.nav-item(class= pageState === 'learn' ? 'active' : '', href="/learn") Learn
       a.nav-item(class= pageState === 'docs' ? 'active' : '', href="/docs") Docs
       a.nav-item(class= pageState === 'contribute' ? 'active' : '', href="/contribute") Contribute

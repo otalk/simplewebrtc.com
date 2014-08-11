@@ -467,11 +467,14 @@ nav.nav-main .button {
   font-family: 'Gotham Rounded A', 'Gotham Rounded B', Helvetica, Arial, sans-serif;
   font-size: 0.95em;
 }
-.nav-docs .logo-ampersand {
-  width: 50px;
-  height: 60px;
-  margin-bottom: 30px;
-  margin-left: 20px;
+.nav-docs .logo-simplewebrtc {
+  margin-bottom: 35px;
+  font-size: 1.6em;
+}
+.nav-docs .logo-simplewebrtc span {
+  display: block;
+  font-size: 0.85em;
+  margin-bottom: -5px;
 }
 .nav-docs a {
   margin-bottom: 5px;

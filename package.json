@@ -17,6 +17,8 @@
     "underscore": "^1.6.0"
   },
   "devDependencies": {
+    "building-static-server": "^1.0.0",
+    "cssmin": "^0.4.1",
     "http-server": "^0.6.1",
     "stylus": "^0.46.3"
   },
@@ -33,7 +35,8 @@
   },
   "scripts": {
     "build": "make build",
-    "start": "make serve"
+    "start": "building-static-server -p 8000 -s 'npm run build'",
+    "update-live-data": "make update-live-data"
   },
   "coreContributors": [
     {

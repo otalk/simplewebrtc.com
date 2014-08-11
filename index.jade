@@ -7,35 +7,19 @@ extends templates/layout
 block content
 
   header.hero
-    .illustration.temp
-      p illustration goes here?
-    h1 A headline about SimpleWebRTC
-
-  hr
+    .illustration.splash
+      img(src="/public/images/simplewebrtc-illustration.svg")
+    h1 Connect with the world's easiest WebRTC library
+    p You can build cool stuff with WebRTC in five minutes. Learn how to 
+      a(href="#") get started 
+      | with SimpleWebRTC or take a peek at 
+      a(href="http://simplewebrtc.com/demo.html") this demo
+      | *.
+    small.footnote *note that screensharing won't work because HTTPS is required
 
   section.splash
 
-    //- .container.cf
-    //-   .splash-intro
-    //-     h2 SimpleWebRTC
-    //-     p Some paragraphs and stuff
-    //-     a.button.button-primary(href="/learn") Discover SimpleWebRTC
-
-    //-   .releases-list
-    //-     h3 Recent releases
-    //-     for module in globals.recent
-    //-       - var split = new Date(module.time[module['dist-tags'].latest]).toDateString().split(' ');
-    //-       - var dateString = split.slice(1, 3).join(' ') + ', ' + split[3];
-    //-       .module-card
-    //-         h4.module-name= module.name
-    //-         p.module-version= 'v' + module['dist-tags'].latest + ' – ' + dateString
-    //-         p.module-links
-    //-           a(href= module.homepage) github
-    //-           a(href= module.npmlink) npm
-        
-    //-     a.button.button-primary(href="/contribute") How to contribute
-
-    //- hr
+    hr
 
     .callout.talky
       h2 Want to see what this library can do? Check out Talky.io!
@@ -48,7 +32,7 @@ block content
 
     .callout.modules-list
       h2 Need more control?
-      p No problem! SimpleWebRTC is comprised of a whole bunch of independent little modules to help you out.
+      p No problem. SimpleWebRTC is comprised of a whole bunch of independent little modules to help you out.
       br
       .cf
         for module in globals.featured

@@ -124,10 +124,10 @@ ol li {
   list-style-type: decimal;
 }
 hr {
-  width: 100%;
-  margin-bottom: 70px;
+  width: 250px;
+  margin: 0 auto 70px;
   border: none;
-  border-top: 1px solid #f7f7f7;
+  border-top: 1px solid #e6eaed;
 }
 @media (max-width: 700px) {
   hr {
@@ -168,6 +168,7 @@ hr {
 }
 .logo.logo-simplewebrtc {
   font-family: 'Gotham SSm A', 'Gotham SSm B', Helvetica, Arial, sans-serif;
+  color: #12acef;
 }
 .logo.logo-simplewebrtc span {
   color: #ec008c;
@@ -188,6 +189,10 @@ hr {
   max-width: 500px;
   padding: 100px 30px;
   border: 1px solid #f7f7f7;
+}
+.illustration.splash img {
+  max-width: 550px;
+  margin-bottom: 20px;
 }
 button {
   border: none;
@@ -539,11 +544,15 @@ nav.nav-main .button {
 }
 .hero {
   text-align: center;
-  padding: 0 20px;
+  padding: 0 20px 50px;
 }
 .hero h1 {
   max-width: 700px;
-  margin: 0 auto 70px;
+  margin: 0 auto 30px;
+}
+.hero p {
+  max-width: 600px;
+  margin: 0 auto 30px;
 }
 .splash .container,
 .splash .callout {
@@ -578,11 +587,11 @@ nav.nav-main .button {
   display: block;
 }
 .splash .logo-talky {
-  width: 200px;
-  height: 125px;
+  width: 180px;
+  height: 115px;
   margin: 30px auto 30px;
   text-indent: -9999em;
-  background-size: 200px auto;
+  background-size: 180px auto;
 }
 .splash .humanjs-ipad {
   max-width: 150px;

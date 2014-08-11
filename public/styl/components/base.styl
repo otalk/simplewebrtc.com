@@ -111,10 +111,10 @@ ol
     list-style-type: decimal
 
 hr
-  width: 100%
-  margin-bottom: 70px
+  width: 250px
+  margin: 0 auto 70px
   border: none
-  border-top: 1px solid $border-color
+  border-top: 1px solid $gray-lighter
 
 @media (max-width: 700px)
   hr
@@ -148,6 +148,7 @@ hr
     background-image: $logo-andbang, none
   &.logo-simplewebrtc
     font-family: $font-family-gotham
+    color: $blue
     span
       color: $pink
 
@@ -169,3 +170,7 @@ hr
     max-width: 500px
     padding: 100px 30px
     border: 1px solid $border-color
+  &.splash
+    img
+      max-width: 550px
+      margin-bottom: 20px

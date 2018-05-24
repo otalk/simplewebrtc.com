@@ -1,3 +1,6 @@
+# This site is DEPRECATED
+The current simplewebrtc.com site has been moved to a private repo.
+
 # Documentation site for ampersand.js
 
 This generates the static site that lives here: http://ampersandjs.com/
